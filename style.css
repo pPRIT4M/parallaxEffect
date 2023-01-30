@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.navbar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+.logo{
+    font-size: 1.4em;
+}
+
+.logo span{
+    color: coral;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+}
+li{
+    padding: 1px 40px;
+    list-style: none;
+    position: relative;
+}
+li a{
+    text-transform: capitalize;
+    font-size: 1.1em;
+}
+.navbar ul li::before{
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background: coral;
+    transform-origin: left;
+    transform: scale(0,1);
+    transition: 0.3s;
+    border-radius: 100vh;
+}
+.navbar ul li:hover::before{
+    transform: scale(1,1);
+}
+.parallax{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -99;
+}
+.parallax img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.parallax img.moon{
+    mix-blend-mode: screen;
+}
+.parallax img.front{
+    z-index: 10;
+}
+.parallax h2{
+    color: #fff;
+    font-size: 5em;
+    position: absolute;
+    right: -1500px;
+    z-index: 9;
+    white-space: nowrap;
+}
+.parallax .Btn{
+    font-size: 1.2em;
+    background: #fff;
+    color: #2b1055;
+    padding: 7px 20px;
+    border-radius: 100vh;
+    transform: translateY(100px);
+    cursor: pointer;
+}
+section{
+    padding: 4em;
+    background: #2b1055;
+}
+section h2{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 3em;
+    padding-bottom: 0.2em;
+}
+p{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.1em;
+}

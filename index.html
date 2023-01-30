@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>parallax effect</title>
+  </head>
+  <body>
+    <header class="head">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="">PRIT<span>AM</span></a>
+        </div>
+        <ul>
+          <li><a href="" id="Home">home</a></li>
+          <li><a href="">about</a></li>
+          <li><a href="">services</a></li>
+          <li><a href="">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="parallax">
+        <img src="/images/moon.png" class="moon">
+        <img src="/images/mountains_behind.png" class="behind">
+        <img src="/images/mountains_front.png" class="front">
+        <img src="/images/stars.png" class="stars">
+        <h2 class="text">MOON LIGHT</h2>
+        <a href="#Home" class="Btn">Explore More</a>
+    </section>
+    <section>
+        <h2>parallax effect</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eos maxime consequuntur modi, magnam blanditiis beatae dolores quos nobis eaque labore. Saepe illum, eum possimus totam a fugit, eos modi facilis temporibus corporis aliquam ducimus nisi, ab minus. Quasi suscipit commodi ea odit accusantium pariatur distinctio, facilis, dolorem ullam amet nobis exercitationem, cum fugit iusto numquam? Perferendis, officia? Magni quod asperiores labore accusamus. Ullam sit ex, ratione doloremque voluptate quis, repellendus vero odio quae non ipsa ab minima alias, quidem quos enim veniam? Culpa quis magnam eius quae iure perferendis quidem? Ullam nobis totam maiores libero non consectetur perspiciatis provident. Id, optio. Perspiciatis animi placeat quaerat architecto repellendus, est minima asperiores! Unde officia doloremque beatae quis nobis enim ad aliquid facere tempora saepe! Reprehenderit, vero labore modi vitae, nulla maxime soluta magnam laboriosam deserunt, adipisci impedit pariatur. Temporibus incidunt ipsum recusandae impedit cum exercitationem accusamus libero commodi obcaecati nam, nihil consequatur laudantium magni eos dolore nisi nemo repudiandae inventore? Nihil ullam, illum soluta necessitatibus earum, porro dolor eaque quidem ipsam provident corporis asperiores quas repellendus exercitationem repellat eos aspernatur et omnis! Aliquid odio illo nesciunt facilis. Ullam dolorum provident laboriosam illo commodi inventore delectus, modi earum iusto. Dolores, neque! Expedita?</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat dolores eveniet sit quam harum mollitia architecto, eos cumque nulla numquam sint aperiam repellendus quaerat cupiditate saepe in autem inventore!</p> <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi alias eveniet saepe, voluptates nulla iste cupiditate dignissimos architecto tempore, velit, aperiam minima. Earum sed cum nisi accusamus quidem, eaque assumenda inventore natus voluptatibus voluptatem tempora. Dolores, nesciunt. Recusandae et consectetur nisi dolorem error voluptate delectus alias. Alias, distinctio ea.</p>
+    </section>
+    <script>
+        const moon = document.querySelector(`.moon`);
+        const behind = document.querySelector(`.behind`);
+        const front = document.querySelector(`.front`);
+        const text = document.querySelector(`.text`);
+        const Btn = document.querySelector(`.Btn`);
+        const stars = document.querySelector(`.stars`);
+
+        document.addEventListener('scroll',()=>{
+            let position = (scrollY);
+            moon.style.top = position + 'px';
+            front.style.top = position*0.5 + 'px';
+            behind.style.top = position*0.75 + 'px';
+            // stars.style.left = position + 'px';
+            text.style.right = position*1.5 + 'px';
+            Btn.style.marginTop = position*0.75 + 'px';
+            text.style.marginTop = position*0.75 + 'px';
+        })
+    </script>
+  </body>
+</html>
